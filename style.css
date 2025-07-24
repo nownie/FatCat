@@ -40,8 +40,8 @@ body {
   text-align: center;
   overflow: auto; /* Allow scrolling within the container */
   color: #000; /* Set text color to black for content area */
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0px;
+  padding-right: 0px;
   box-sizing: border-box;
 }
 
