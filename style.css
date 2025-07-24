@@ -138,6 +138,7 @@ body {
   color: #EAEBEE;
   margin-bottom: 20px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .composition-section .tabs {
