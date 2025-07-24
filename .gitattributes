@@ -1,0 +1,5 @@
+*.css text eol=lf
+index.html text eol=lf
+script.js text eol=lf
+service-worker.js text eol=lf 
+* text=auto
