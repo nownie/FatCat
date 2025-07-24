@@ -45,6 +45,91 @@ body {
   box-sizing: border-box;
 }
 
+.asset-summary {
+  width: 100%;
+  background-color: #1A1C23; /* Dark background */
+  padding: 15px;
+  color: #EAEBEE; /* Light grey text */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.asset-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.asset-header .label {
+  font-size: 14px;
+  color: #B0B0B0; /* Slightly darker grey for labels */
+}
+
+.asset-header .backtesting {
+  font-size: 14px;
+  color: #B0B0B0;
+}
+
+.asset-value {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.asset-value .currency {
+  font-size: 24px;
+  vertical-align: super;
+}
+
+.daily-profit {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.daily-profit .label {
+  color: #B0B0B0;
+}
+
+.daily-profit .profit-value.positive {
+  color: #FF4D4D; /* Red for positive profit */
+  font-weight: bold;
+}
+
+.daily-profit .profit-percentage.positive {
+  color: #FF4D4D;
+  font-weight: bold;
+}
+
+.divider {
+  border-top: 1px solid #333; /* Darker line */
+  margin: 15px 0;
+}
+
+.dividend-summary {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dividend-item {
+  flex: 1;
+  min-width: 120px; /* Ensure items don't get too small */
+  margin-bottom: 10px;
+}
+
+.dividend-item .label {
+  font-size: 12px;
+  color: #B0B0B0;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.dividend-item .value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 #last-updated {
   width: 100%;
   height: 25px; /* Fixed height for footer */
