@@ -50,3 +50,14 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+
+// Update last updated time
+window.addEventListener('load', () => {
+  const lastUpdatedElement = document.getElementById('last-updated');
+  if (lastUpdatedElement) {
+    const gitCommitTime = "Thu Jul 24 21:44:00 2025 +0900";
+    const now = new Date(gitCommitTime);
+    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    lastUpdatedElement.textContent = `Last Updated: ${now.toLocaleString('en-US', options)}`;
+  }
+});
