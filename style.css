@@ -226,6 +226,83 @@ body {
   font-weight: bold;
 }
 
+.investment-status-section {
+  width: 100%;
+  background-color: #1A1C23;
+  padding: 15px;
+  color: #EAEBEE;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.investment-status-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.investment-status-section .section-header .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.investment-status-section .section-header .view-all {
+  font-size: 14px;
+  color: #B0B0B0;
+  cursor: pointer;
+}
+
+.investment-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.investment-table .table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.investment-table .table-row.header {
+  font-weight: bold;
+  color: #B0B0B0;
+}
+
+.investment-table .table-row:last-child {
+  border-bottom: none;
+}
+
+.investment-table .col-name {
+  flex: 2;
+  text-align: left;
+}
+
+.investment-table .col-amount {
+  flex: 1.5;
+  text-align: right;
+}
+
+.investment-table .col-profit {
+  flex: 1.5;
+  text-align: right;
+  font-weight: bold;
+}
+
+.investment-table .col-profit.positive {
+  color: #FF4D4D; /* Red for positive profit */
+}
+
+.investment-table .col-profit.negative {
+  color: #4CAF50; /* Green for negative profit */
+}
+
+.investment-table .col-profit.zero {
+  color: #EAEBEE; /* Light grey for zero profit */
+}
+
 #last-updated {
   width: 100%;
   height: 25px; /* Fixed height for footer */
