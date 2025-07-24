@@ -57,7 +57,12 @@ window.addEventListener('load', () => {
   if (lastUpdatedElement) {
     const gitCommitTime = "PLACEHOLDER";
     const now = new Date(gitCommitTime);
-    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-    lastUpdatedElement.textContent = `Last Updated: ${now.toLocaleString('ko-KR', options)}`;
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0');
+    const day = now.getDate().toString().padStart(2, '0');
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    lastUpdatedElement.textContent = `Last Updated: ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   }
 });
