@@ -42,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Bar Chart
   const barCtx = document.getElementById('barChart').getContext('2d');
+  const currentMonth = new Date().getMonth(); // 0-indexed (0 for January)
+  const barColors = Array(12).fill('rgba(50, 50, 50, 0.6)'); // Light black
+  barColors[currentMonth] = 'rgba(255, 205, 86, 0.6)'; // Yellow
+
+  const borderColors = Array(12).fill('rgba(50, 50, 50, 1)'); // Light black
+  borderColors[currentMonth] = 'rgba(255, 205, 86, 1)'; // Yellow
+
   const barChart = new Chart(barCtx, {
     type: 'bar',
     data: {
@@ -49,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
       datasets: [{
         label: '월별 현금 흐름',
         data: [12, 19, 3, 5, 2, 3, 7, 8, 10, 6, 4, 11],
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-        borderColor: 'rgba(54, 162, 235, 1)',
+        backgroundColor: barColors,
+        borderColor: borderColors,
         borderWidth: 1
       }]
     },
