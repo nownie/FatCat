@@ -1,3 +1,7 @@
+function formatNumberWithoutDecimals(number) {
+  return Math.round(number).toLocaleString();
+}
+
 function hello() {
   alert("Hello, 꿈별바우!");
 }

@@ -22,67 +22,69 @@
 </head>
 
 <body>
-  <div id="header-title">FatCat V0.1</div>
-  
+  <div id="header-title">FatCat V0.2</div>
+  <p>뚱땡이 고냥이는 한가로이 낮잠을 즐긴다.</p>
   <div class="container">
-    <section class="section">
-      <div class="asset-summary-header">
-        <span class="label">총 자산</span>
-        <span class="backtesting">백테스팅 →</span>
-      </div>
-      <div class="asset-summary-value">
-        <span class="currency">₩</span><span class="value">524,496,707</span>
-      </div>
-      <div class="daily-profit">
-        <span class="label">일간 수익</span> <span class="profit-value positive">+₩428,396</span><span class="profit-percentage positive">(+0.09%)</span>
-      </div>
-      <div class="divider"></div>
-      <div class="dividend-summary">
-        <div class="dividend-item">
-          <span class="label">연간 총 배당금</span>
-          <span class="value">₩8,285,068</span>
+    <div class="main-content">
+      <section class="section">
+        <div class="asset-summary-header">
+          <span class="label">총 자산</span>
+          <span class="backtesting">백테스팅 →</span>
         </div>
-        <div class="dividend-item">
-          <span class="label">투자 배당률</span>
-          <span class="value">2.00%</span>
+        <div class="asset-summary-value">
+          <span class="currency">₩</span><span class="value">524,496,707</span>
         </div>
-        <div class="dividend-item">
-          <span class="label">시가 배당률</span>
-          <span class="value">1.58%</span>
+        <div class="daily-profit">
+          <span class="label">일간 수익</span> <span class="profit-value positive">+₩428,396</span><span class="profit-percentage positive">(+0.09%)</span>
         </div>
-      </div>
-    </section>
-    
-    <section class="section asset-alloc-section">
-      <div class="asset-alloc-header">
-        <span class="label">자산 구성</span>
-      </div>
-      <div class="asset-alloc-container">
-        <div class="asset-alloc-content">
-          <canvas id="donutChart"></canvas>
+        <div class="divider"></div>
+        <div class="dividend-summary">
+          <div class="dividend-item">
+            <span class="label">연간 총 배당금</span>
+            <span class="value">₩8,285,068</span>
+          </div>
+          <div class="dividend-item">
+            <span class="label">투자 배당률</span>
+            <span class="value">2.00%</span>
+          </div>
+          <div class="dividend-item">
+            <span class="label">시가 배당률</span>
+            <span class="value">1.58%</span>
+          </div>
         </div>
-        <div id="asset-alloc-legend" class="asset-alloc-legend"></div>
-      </div>
-    </section>
+      </section>
+      
+      <section class="section asset-alloc-section">
+        <div class="asset-alloc-header">
+          <span class="label">자산 구성</span>
+        </div>
+        <div class="asset-alloc-container">
+          <div class="asset-alloc-content">
+            <canvas id="donutChart"></canvas>
+          </div>
+          <div id="asset-alloc-legend" class="asset-alloc-legend"></div>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="dividend-chart-header">
-        <span class="label">예상 배당금</span>
-      </div>
-      <div class="dividend-chart-container">
-        <canvas id="barChart"></canvas>
-      </div>
-    </section>
+      <section class="section">
+        <div class="dividend-chart-header">
+          <span class="label">예상 배당금</span>
+        </div>
+        <div class="dividend-chart-container">
+          <canvas id="barChart"></canvas>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="chart-header">
-        <span class="label">분야별 비중</span>
-      </div>
-      <div class="sector-weight-container">
-        <canvas id="sectorWeightChart"></canvas>
-      </div>
-      <div id="sector-weight-legend" class="sector-weight-legend"></div>
-    </section>
+      <section class="section">
+        <div class="chart-header">
+          <span class="label">분야별 비중</span>
+        </div>
+        <div class="sector-weight-container">
+          <canvas id="sectorWeightChart"></canvas>
+        </div>
+        <div id="sector-weight-legend" class="sector-weight-legend"></div>
+      </section>
+    </div>
 
     <section class="section asset-list-section">
       <div class="asset-tabs">
@@ -120,11 +122,11 @@
           <div class="asset-details">
             <div class="asset-value-info">
               <span class="label">자산가치</span>
-              <span class="value">$25,061.22</span>
+              <span class="value">$25,061</span>
             </div>
             <div class="asset-profit-info">
               <span class="label">수익</span>
-              <span class="value">$8,727.84 (53.44%)</span>
+              <span class="value">$8,728 (53.44%)</span>
             </div>
             <div class="asset-dividend-info">
               <span class="label">배당월</span>
@@ -132,11 +134,11 @@
             </div>
             <div class="asset-purchase-info">
               <span class="label">구매가</span>
-              <span class="value">$31.29</span>
+              <span class="value">$31</span>
             </div>
             <div class="asset-current-info">
               <span class="label">현재가</span>
-              <span class="value">$48.01 <span class="negative">▼0.79%</span></span>
+              <span class="value">$48 <span class="negative">▼0.79%</span></span>
             </div>
             <div class="asset-yield-info">
               <span class="label">투자배당률</span>
@@ -149,10 +151,7 @@
         <p>매매일지 내용이 여기에 표시됩니다.</p>
       </div>
     </section>
-   
-    
-    <p>뚱땡이 고냥이는 한가로이 낮잠을 즐긴다.</p>
   </div>
-  <div class="last-updated">Last Updated: 2025. 7. 25. 오후 11:53:09</div>
+  <div class="last-updated">Last Updated: 2025. 7. 26. 오전 8:01:14</div>
 </body>
 </html>

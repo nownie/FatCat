@@ -44,6 +44,38 @@ body {
   box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  body {
+    flex-direction: row; /* Arrange children in a row for wider screens */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+
+  #header-title {
+    display: none; /* Hide header on wider screens */
+  }
+
+  .container {
+    width: auto; /* Allow container to shrink/grow based on content */
+    height: 100%; /* Full height */
+    flex-direction: row; /* Arrange children in a row */
+    overflow: hidden; /* Prevent scrolling on the container itself */
+  }
+
+  .main-content {
+    flex: 2; /* Main content takes more space */
+    overflow-y: auto; /* Allow vertical scrolling for main content */
+    height: 100%;
+  }
+
+  .asset-list-section {
+    flex: 1; /* Asset list takes less space */
+    order: 1; /* Place on the right */
+    overflow-y: auto; /* Allow vertical scrolling for asset list */
+    height: 100%;
+  }
+}
+
 .section {
   width: 100%;
   background-color: #1A1C23; /* Dark background */
