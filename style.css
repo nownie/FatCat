@@ -54,30 +54,30 @@ body {
   box-sizing: border-box;
 }
 
-.asset-header {
+.asset-summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.asset-header .label {
+.asset-summary-header .label {
   font-size: 14px;
   color: #B0B0B0; /* Slightly darker grey for labels */
 }
 
-.asset-header .backtesting {
+.asset-summary-header .backtesting {
   font-size: 14px;
   color: #B0B0B0;
 }
 
-.asset-value {
+.asset-summary-value {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.asset-value .currency {
+.asset-summary-value .currency {
   font-size: 24px;
   vertical-align: super;
 }
@@ -152,13 +152,17 @@ button {
   cursor: pointer;
 }
 
-.chart-container {
+.asset-alloc-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.chart-legend {
+.asset-alloc-content {
+  width: 40%;
+}
+
+.asset-alloc-legend {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -178,6 +182,4 @@ button {
   border-radius: 0px;
 }
 
-.chart-content {
-  width: 40%;
-}
+

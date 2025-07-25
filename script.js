@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Generate custom legend
-  const legendContainer = document.getElementById('chart-legend');
+  const legendContainer = document.getElementById('asset-alloc-legend');
   const chartData = donutChart.data;
   let legendHTML = '';
   chartData.labels.forEach((label, index) => {
