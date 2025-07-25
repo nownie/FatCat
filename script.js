@@ -2,6 +2,8 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
+const gitCommitTime = "2025-07-25T14:56:19+09:00";
+
 let newWorker;
 
 // Register service worker
@@ -51,54 +53,3 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Update last updated time
-window.addEventListener('load', () => {
-  const lastUpdatedElement = document.getElementById('last-updated');
-  if (lastUpdatedElement) {
-    const gitCommitTime = "2025-07-25T14:55:09+09:00";
-    const now = new Date(gitCommitTime);
-    const year = now.getFullYear();
-    const month = (now.getMonth() + 1).toString().padStart(2, '0');
-    const day = now.getDate().toString().padStart(2, '0');
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    lastUpdatedElement.textContent = `Last Updated: ${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-  }
-
-  // Chart.js Doughnut Chart
-  const ctx = document.getElementById('compositionChart').getContext('2d');
-  const compositionChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['삼성물산', '삼성바이오로직스', '삼성전자', 'BioTNS', 'KRW', '미국나스닥100', '미국S&P500', '코리아배당다우', '미국배당커버드', 'KT', 'SPY', '삼성전자우', 'QQQ', 'RISE 종합채권', 'JEPQ', 'SCHD', '현대오토에버', '미국부동산리츠', 'JEPI', '기타'],
-      datasets: [{
-        data: [29.0, 16.6, 7.6, 5.7, 4.9, 4.3, 4.1, 4.0, 3.4, 3.3, 3.3, 3.1, 3.0, 1.9, 1.2, 1.2, 1.0, 0.8, 0.6, 1.0],
-        backgroundColor: [
-          '#008080', '#008080', '#008080', '#FF0000', '#FFA500', '#008080', '#008080', '#0000FF', '#FF4500', '#FFD700',
-          '#008000', '#008080', '#0000FF', '#4682B4', '#90EE90', '#808080', '#FF4500', '#800080', '#0000FF', '#FFD700'
-        ],
-        borderColor: '#1A1C23',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '70%', // For doughnut chart
-      plugins: {
-        legend: {
-          display: true,
-          labels: {
-            usePointStyle: true,
-            boxWidth: 6,
-            boxHeight: 12
-          }
-        },
-        tooltip: {
-          enabled: true
-        }
-      }
-    }
-  });
-});
