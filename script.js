@@ -141,10 +141,12 @@ document.addEventListener('DOMContentLoaded', () => {
           display: false
         },
         datalabels: {
+          anchor: 'center',
+          align: 'center',
           formatter: (value, context) => {
             return value.toFixed(2) + '%';
           },
-          color: '#EAEBEE', // White color for labels
+          color: '#B0B0B0', // Gray color for labels
           font: {
             weight: 'bold'
           }
