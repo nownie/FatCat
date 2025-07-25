@@ -98,6 +98,68 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Sector Weight Chart
+  const sectorWeightCtx = document.getElementById('sectorWeightChart').getContext('2d');
+  const sectorWeightData = [
+    { label: '금융', value: 23.79, color: '#DC143C' }, // Crimson
+    { label: '통신', value: 23.35, color: '#FFA500' }, // Orange
+    { label: '첨단 기술', value: 23.31, color: '#4169E1' }, // RoyalBlue
+    { label: '필수 소비재', value: 22.39, color: '#00008B' }, // DarkBlue
+    { label: '헬스케어', value: 7.17, color: '#FFD700' }  // Gold
+  ];
+
+  const sectorWeightChart = new Chart(sectorWeightCtx, {
+    type: 'bar',
+    data: {
+      labels: [''], // Single bar
+      datasets: sectorWeightData.map(item => ({
+        label: item.label,
+        data: [item.value],
+        backgroundColor: item.color,
+        borderColor: item.color,
+        borderWidth: 1
+      }))
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          stacked: true,
+          display: false,
+          max: 100 // Total percentage
+        },
+        y: {
+          stacked: true,
+          display: false
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        datalabels: {
+          formatter: (value, context) => {
+            return value.toFixed(2) + '%';
+          },
+          color: '#EAEBEE', // White color for labels
+          font: {
+            weight: 'bold'
+          }
+        }
+      }
+    }
+  });
+
+  // Generate custom legend for Sector Weight Chart
+  const sectorWeightLegendContainer = document.getElementById('sector-weight-legend');
+  let sectorWeightLegendHTML = '';
+  sectorWeightData.forEach(item => {
+    sectorWeightLegendHTML += `<div class="legend-item"><span class="legend-color" style="background-color:${item.color}"></span>${item.label} ${item.value.toFixed(2)}%</div>`;
+  });
+  sectorWeightLegendContainer.innerHTML = sectorWeightLegendHTML;
 });
 
 let newWorker;

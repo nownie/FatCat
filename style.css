@@ -191,5 +191,29 @@ button {
 
 .bar-chart-section .chart-container {
   width: 100%;
-  border-radius: 5px;
+}
+
+.sector-weight-container {
+  width: 100%;
+  height: 30px; /* Adjust height as needed */
+  margin-top: 10px;
+}
+
+.sector-weight-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sector-weight-legend .legend-item {
+  margin: 5px 10px;
+}
+
+.sector-weight-legend .legend-color {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }
