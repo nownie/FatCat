@@ -18,9 +18,10 @@ body {
 @media (min-width: 768px) {
   body {
     flex-direction: row; /* Arrange children in a row for wider screens */
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Center items vertically */
     justify-content: center; /* Center content horizontally */
     height: 100vh; /* Ensure body takes full viewport height */
+    width: 100vw; /* Ensure body takes full viewport width */
     overflow: hidden; /* Prevent body scrolling when columns handle it */
   }
 
