@@ -39,6 +39,49 @@ document.addEventListener('DOMContentLoaded', () => {
     legendHTML += `<div class="legend-item"><span class="legend-color" style="background-color:${backgroundColor}"></span>${label}</div>`;
   });
   legendContainer.innerHTML = legendHTML;
+
+  // Bar Chart
+  const barCtx = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      datasets: [{
+        label: '월별 현금 흐름',
+        data: [12, 19, 3, 5, 2, 3, 7, 8, 10, 6, 4, 11],
+        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        },
+        datalabels: {
+          anchor: 'end',
+          align: 'top',
+          formatter: Math.round,
+          font: {
+            weight: 'bold'
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false
+          }
+        },
+        y: {
+          display: false
+        }
+      }
+    }
+  });
 });
 
 let newWorker;
