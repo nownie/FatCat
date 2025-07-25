@@ -2,27 +2,20 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
-const gitCommitTime = "2025-07-25T15:34:02+09:00";
 
-document.addEventListener('DOMContentLoaded', () => {
-  const footerLastUpdatedElement = document.getElementById('footer-last-updated-time');
-  if (footerLastUpdatedElement) {
-    footerLastUpdatedElement.textContent = new Date(gitCommitTime).toLocaleString();
-  }
 
   // Donut Chart
   const ctx = document.getElementById('donutChart').getContext('2d');
   const donutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['주식', '부동산', '현금', '기타'],
+      labels: ['leg1', 'gl2', 'gl3'],
       datasets: [{
-        data: [300, 50, 100, 20],
+        data: [40, 30, 30],
         backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(75, 192, 192)'
+          'rgb(255, 99, 132)', // Red
+          'rgb(54, 162, 235)', // Blue
+          'rgb(255, 205, 86)'  // Yellow
         ],
         hoverOffset: 4
       }]
@@ -32,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
       maintainAspectRatio: false,
       plugins: {
         legend: {
+          position: 'right', // Show legend on the right
+          align: 'center', // Center align legend items
           labels: {
             color: '#FFFFFF' // White for legend text
           }

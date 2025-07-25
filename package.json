@@ -1,0 +1,12 @@
+{
+  "name": "fatcat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "update-time": "node last-updated.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

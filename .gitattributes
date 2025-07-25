@@ -2,4 +2,6 @@
 index.html text eol=lf
 script.js text eol=lf
 service-worker.js text eol=lf 
+last-updated.js text eol=lf
+package.json text eol=lf
 * text=auto
