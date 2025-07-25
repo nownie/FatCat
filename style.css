@@ -134,10 +134,10 @@ body {
 #last-updated {
   width: 100%;
   height: 25px; /* Fixed height for footer */
-  padding: 5px 0;
+  padding-bottom: 25px;
   background-color: #000; /* Black background for footer */
   color: #EAEBEE; /* Light grey text color */
-  font-size: 12px;
+  font-size: 8px;
   text-align: center;
   flex-shrink: 0; /* Prevent shrinking */
 }
