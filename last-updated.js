@@ -2,18 +2,27 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 const filePath = './index.html';
-const placeholder = '<!-- LAST_UPDATED -->';
+// This regular expression looks for the placeholder OR "Last Updated:" followed by any characters.
+const placeholderRegex = /(<!-- LAST_UPDATED -->|Last Updated: .*)/;
 
 try {
+    // Get the latest commit time
     const gitCommitTime = execSync('git log -1 --format=%aI').toString().trim();
     const formattedDate = new Date(gitCommitTime).toLocaleString();
+    const newContent = `Last Updated: ${formattedDate}`;
 
+    // Read the file
     let fileContent = fs.readFileSync(filePath, 'utf8');
-    fileContent = fileContent.replace(placeholder, `Last Updated: ${formattedDate}`);
 
-    fs.writeFileSync(filePath, fileContent, 'utf8');
+    // Replace the content using the regular expression
+    if (placeholderRegex.test(fileContent)) {
+        fileContent = fileContent.replace(placeholderRegex, newContent);
+        fs.writeFileSync(filePath, fileContent, 'utf8');
+        console.log(`Successfully updated timestamp in ${filePath}`);
+    } else {
+        console.warn('Could not find the placeholder or previous timestamp to update.');
+    }
 
-    console.log(`Successfully updated timestamp in ${filePath}`);
 } catch (error) {
     console.error('Error updating timestamp:', error.message);
 }
