@@ -55,7 +55,7 @@ if ('serviceWorker' in navigator) {
 window.addEventListener('load', () => {
   const lastUpdatedElement = document.getElementById('last-updated');
   if (lastUpdatedElement) {
-    const gitCommitTime = "2025-07-25T13:08:26+09:00";
+    const gitCommitTime = "2025-07-25T13:11:49+09:00";
     const now = new Date(gitCommitTime);
     const year = now.getFullYear();
     const month = (now.getMonth() + 1).toString().padStart(2, '0');
