@@ -36,7 +36,6 @@ body {
     display: flex; /* Make container a flex container */
     flex-direction: row; /* Arrange children in a row */
     overflow: hidden; /* Prevent scrolling on the container itself */
-    margin: auto; /* Center the container */
   }
 
   body > p, .last-updated {
