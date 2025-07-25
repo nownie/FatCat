@@ -20,7 +20,7 @@
 <body>
   <div id="header-title">FatCat</div>
   <div class="container">
-    <section class="asset-section">
+    <section class="section asset-section">
       <div class="asset-header">
         <span class="label">총 자산</span>
         <span class="backtesting">백테스팅 →</span>
@@ -47,9 +47,7 @@
         </div>
       </div>
     </section>
-    
-    <!-- Asset Composition (from rich1.png) -->
-    <section class="mt-8 px-4 py-4">
+    <section class="section dividend-status-section">
       <div class="flex items-center justify-between">
         <div class="flex rounded-lg bg-[#1A1C23] p-1">
           <button class="active-tab rounded-md px-4 py-1.5 text-sm font-bold">자산 구성</button>
@@ -60,7 +58,7 @@
       <div class="mt-6 grid grid-cols-10 gap-4">
         <div class="donut-chart relative flex items-center justify-center col-span-4">
           <canvas id="compositionChart"></canvas>
-          <div class="card-bg absolute flex h-[110px] w-[110px] items-center justify-center rounded-full">
+          <div class="absolute flex h-[110px] w-[110px] items-center justify-center rounded-full">
             <span class="text-lg font-bold">₩524,402,822</span>
           </div>
         </div>
@@ -92,8 +90,26 @@
         </div>
       </div>
     </section>
-    
-    <h1>꿈별바우</h1>
+    <section class="section investment-status-section">
+    </section>
+    <section class="section monthly-dividend-section">
+      <div class="section-header">
+        <span class="title">월별 배당</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="chart-container-bar">
+        <!-- Bar chart will be rendered here -->
+      </div>
+    </section>
+    <section class="section dividend-calendar-section">
+      <div class="section-header">
+        <span class="title">배당 캘린더</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="calendar-grid">
+        <!-- Calendar months will be dynamically added here -->
+      </div>
+    </section>
     <p>뚱땡이 고냥이는 한가로이 낮잠을 즐긴다.</p>
     <button onclick="hello()">누르기</button>
     <button id="check-update-button">업데이트 확인</button>
