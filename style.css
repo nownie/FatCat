@@ -219,6 +219,7 @@ body {
   height: 12px;
   margin-right: 8px;
   border-radius: 2px;
+  display: inline-block;
 }
 
 .legend-item .percentage {
