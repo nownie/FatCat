@@ -22,8 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false // Hide default legend
+        }
+      }
     }
   });
+
+  // Generate custom legend
+  const legendContainer = document.getElementById('chart-legend');
+  const chartData = donutChart.data;
+  let legendHTML = '';
+  chartData.labels.forEach((label, index) => {
+    const backgroundColor = chartData.datasets[0].backgroundColor[index];
+    legendHTML += `<div class="legend-item"><span class="legend-color" style="background-color:${backgroundColor}"></span>${label}</div>`;
+  });
+  legendContainer.innerHTML = legendHTML;
 });
 
 let newWorker;
