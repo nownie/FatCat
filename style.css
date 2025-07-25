@@ -29,7 +29,7 @@ body {
   flex-shrink: 0; /* Prevent shrinking */
 }
 
-.last-updated {
+#last-updated {
   width: 100%;
   background-color: #000; /* Black background for header */
   padding: 5px;
