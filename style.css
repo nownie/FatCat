@@ -56,10 +56,14 @@ body {
   }
 
   .container {
-    width: auto; /* Allow container to shrink/grow based on content */
+    width: 100%; /* Ensure container takes full width */
     height: 100%; /* Full height */
     flex-direction: row; /* Arrange children in a row */
     overflow: hidden; /* Prevent scrolling on the container itself */
+  }
+
+  body > p, .last-updated {
+    display: none; /* Hide the paragraph and last-updated div on wider screens */
   }
 
   .main-content {
