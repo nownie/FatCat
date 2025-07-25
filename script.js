@@ -162,6 +162,32 @@ document.addEventListener('DOMContentLoaded', () => {
     sectorWeightLegendHTML += `<div class="legend-item"><span class="legend-color" style="background-color:${item.color}"></span>${item.label} ${item.value.toFixed(2)}%</div>`;
   });
   sectorWeightLegendContainer.innerHTML = sectorWeightLegendHTML;
+
+  // Tab switching logic
+  const tabs = document.querySelectorAll('.asset-tabs .tab');
+  const assetContent = document.getElementById('asset-content');
+  const tradeLogContent = document.getElementById('trade-log-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const targetTab = tab.dataset.tab;
+
+      if (targetTab === 'asset') {
+        assetContent.classList.remove('hidden');
+        tradeLogContent.classList.add('hidden');
+      } else if (targetTab === 'trade-log') {
+        assetContent.classList.add('hidden');
+        tradeLogContent.classList.remove('hidden');
+      } else if (targetTab === 'news') {
+        assetContent.classList.add('hidden');
+        tradeLogContent.classList.add('hidden');
+        // Implement news content display here
+      }
+    });
+  });
 });
 
 let newWorker;

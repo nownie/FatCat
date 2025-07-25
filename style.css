@@ -318,3 +318,7 @@ button {
 .asset-item .asset-details .negative {
   color: #FF4D4D;
 }
+
+.hidden {
+  display: none !important;
+}
