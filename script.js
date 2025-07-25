@@ -2,6 +2,15 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
+const gitCommitTime = "2025-07-25T15:13:54+09:00";
+
+document.addEventListener('DOMContentLoaded', () => {
+  const footerLastUpdatedElement = document.getElementById('footer-last-updated-time');
+  if (footerLastUpdatedElement) {
+    footerLastUpdatedElement.textContent = new Date(gitCommitTime).toLocaleString();
+  }
+});
+
 let newWorker;
 
 // Register service worker
