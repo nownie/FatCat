@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
           font: {
             weight: 'bold'
           },
-          color: '#B0B0B0' // Gray color for labels
+          color: '#dd1414ff' // Gray color for labels
         }
       },
       scales: {
