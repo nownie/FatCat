@@ -72,12 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         datalabels: {
           anchor: 'end',
-          align: 'top',
+          align: 'end',
+          offset: 4,
           formatter: Math.round,
           font: {
             weight: 'bold'
           },
-          color: '#dd1414ff' // Gray color for labels
+          color: '#B0B0B0' // Gray color for labels
         }
       },
       scales: {
