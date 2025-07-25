@@ -88,7 +88,7 @@ window.addEventListener('load', () => {
       cutout: '70%', // For doughnut chart
       plugins: {
         legend: {
-          display: false // We have a custom legend
+          display: true // We have a custom legend
         },
         tooltip: {
           enabled: true
