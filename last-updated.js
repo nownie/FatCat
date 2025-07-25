@@ -7,8 +7,9 @@ const placeholderRegex = /(<!-- LAST_UPDATED -->|Last Updated: .*)/;
 
 try {
     // Get the latest commit time
-    const gitCommitTime = execSync('git log -1 --format=%aI').toString().trim();
-    const formattedDate = new Date(gitCommitTime).toLocaleString();
+    //const gitCommitTime = execSync('git log -1 --format=%aI').toString().trim();
+    //const gitCommitTime = new Date().toISOString().toString().trim();
+    const formattedDate = new Date().toLocaleString();
     const newContent = `Last Updated: ${formattedDate}</div>`;
 
     // Read the file
