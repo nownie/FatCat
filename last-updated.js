@@ -6,7 +6,7 @@ const scriptPath = path.join(__dirname, 'script.js');
 
 try {
     // Get the last commit date from Git
-    const gitCommitTime = execSync('git log -1 --format="%aI"').toString().trim(); // Using %aI for ISO 8601 format
+    const gitCommitTime = execSync(`git log -1 --format="%aI" -- ${scriptPath}`).toString().trim(); // Using %aI for ISO 8601 format
 
     // Read the content of script.js
     let scriptContent = fs.readFileSync(scriptPath, 'utf8');
