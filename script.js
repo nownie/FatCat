@@ -2,6 +2,8 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
+Chart.register(ChartDataLabels);
+
 document.addEventListener('DOMContentLoaded', () => {
   // Donut Chart
   const ctx = document.getElementById('donutChart').getContext('2d');
@@ -66,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: true
+          display: false
         },
         datalabels: {
           anchor: 'end',
