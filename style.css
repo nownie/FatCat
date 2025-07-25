@@ -158,7 +158,7 @@ button {
   align-items: center;
 }
 
-.chart-container {
+.asset-chart-container {
   width: 40%;
 }
 
@@ -183,3 +183,8 @@ button {
 }
 
 
+.dividend-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
