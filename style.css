@@ -33,6 +33,7 @@ body {
   width: 100%;
   background-color: #000; /* Black background for header */
   padding: 5px;
+  padding-bottom: 15px;
   flex-shrink: 0; /* Prevent shrinking */
 }
 
