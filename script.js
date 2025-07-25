@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const borderColors = Array(12).fill('rgba(50, 50, 50, 1)'); // Light black
   borderColors[currentMonth] = 'rgba(255, 205, 86, 1)'; // Yellow
 
-  const barData = barChart.data.datasets[0].data;
+  const barData = [12, 6, 34, 12, 5, 4, 22, 8, 12, 20, 9, 10]; //barChart.data.datasets[0].data;
   const maxBarValue = Math.max(...barData);
   const suggestedMaxY = maxBarValue * 1.2; // Add 20% padding
 
