@@ -160,6 +160,7 @@ button {
 
 .asset-alloc-content {
   width: 40%;
+  background-color: #EAEBEE;
 }
 
 .asset-alloc-legend {
@@ -180,6 +181,10 @@ button {
   height: 12px;
   margin-right: 8px;
   border-radius: 0px;
+}
+
+.asset-alloc-section {
+  padding: 5px 15px; /* Reduced top/bottom padding */
 }
 
 
