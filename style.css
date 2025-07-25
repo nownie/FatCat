@@ -152,7 +152,7 @@ button {
   cursor: pointer;
 }
 
-.chart-content {
+.chart-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,12 +172,12 @@ button {
 }
 
 .legend-color {
-  width: 12px;
+  width: 5px;
   height: 12px;
   margin-right: 8px;
   border-radius: 2px;
 }
 
-.chart-container {
+.chart-content {
   width: 40%;
 }
