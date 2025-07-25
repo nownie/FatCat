@@ -58,7 +58,7 @@ body {
 .asset-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   margin-bottom: 10px;
 }
 
@@ -209,9 +209,9 @@ body {
 
 .legend-item {
   display: flex;
-  align-items: center;
+  align-items: left;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .legend-item .color-box {
