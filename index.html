@@ -16,280 +16,269 @@
 
 </head>
 <body>
-  <!-- Total Assets (from rich1.png) -->
-  <section class="mt-2 px-4">
-    <div class="flex items-center justify-between">
-      <div>
-        <h2 class="text-secondary text-lg">총 자산</h2>
-        <p class="mt-1 text-4xl font-bold"><?= totalAssets ?></p>
+  <div id="header-title">FatCat</div>
+  <div class="container">
+    <div class="asset-summary">
+      <div class="asset-header">
+        <span class="label">총 자산</span>
+        <span class="backtesting">백테스팅 →</span>
       </div>
-      <span class="text-blue-accent text-sm font-semibold">백테스팅 →</span>
-    </div>
-    <p class="text-red-accent mt-2 text-lg">총 수익 <?= totalProfit ?>(<?= totalProfitPercentage ?>)</p>
-    <div class="mt-6 grid grid-cols-3 text-center">
-      <div class="pr-3">
-        <h3 class="text-secondary text-sm">연간 총 배당금</h3>
-        <p class="mt-1 text-lg font-semibold"><?= annualDividend ?></p>
+      <div class="asset-value">
+        <span class="currency">₩</span><span class="value">524,496,707</span>
       </div>
-      <div class="divider border-r border-l px-3">
-        <h3 class="text-secondary text-sm">투자 배당률</h3>
-        <p class="mt-1 text-lg font-semibold"><?= investmentDividendYield ?></p>
+      <div class="daily-profit">
+        <span class="label">일간 수익</span> <span class="profit-value positive">+₩428,396</span><span class="profit-percentage positive">(+0.09%)</span>
       </div>
-      <div class="pl-3">
-        <h3 class="text-secondary text-sm">시가 배당률</h3>
-        <p class="mt-1 text-lg font-semibold"><?= marketDividendYield ?></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Asset Composition (from rich1.png) -->
-  <section class="card-bg mt-8 px-4 py-4">
-    <div class="flex items-center justify-between">
-      <div class="flex rounded-lg bg-[#1A1C23] p-1">
-        <button class="active-tab rounded-md px-4 py-1.5 text-sm font-bold">자산 구성</button>
-        <button class="inactive-tab rounded-md px-4 py-1.5 text-sm font-bold">배당 구성</button>
-      </div>
-      <i class="fas fa-share-square text-secondary text-xl"></i>
-    </div>
-    <div class="mt-6 flex">
-      <div class="donut-chart relative flex flex-shrink-0 items-center justify-center">
-        <div class="card-bg absolute flex h-[110px] w-[110px] items-center justify-center rounded-full">
-          <span class="text-lg font-bold">₩524,402,822</span>
+      <div class="divider"></div>
+      <div class="dividend-summary">
+        <div class="dividend-item">
+          <span class="label">연간 총 배당금</span>
+          <span class="value">₩8,285,068</span>
         </div>
-      </div>
-      <div class="ml-4 grid w-full grid-cols-2 gap-x-4 text-xs">
-        <div class="space-y-1">
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-emerald-400"></i>삼성물산</span><span>29.2%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-blue-400"></i>삼성바이오로직스</span><span>16.2%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-400"></i>삼성전자</span><span>7.6%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-orange-400"></i>BioTNS</span><span>5.7%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-yellow-400"></i>KRW</span><span>4.9%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-purple-400"></i>미국나스닥100(...)</span><span>4.3%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-green-400"></i>미국S&P500(TI...)</span><span>4.1%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-teal-400"></i>코리아배당다우...</span><span>4.0%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-indigo-400"></i>미국배당커버드...</span><span>3.4%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-red-400"></i>KT</span><span>3.3%</span></div>
+        <div class="dividend-item">
+          <span class="label">투자 배당률</span>
+          <span class="value">2.00%</span>
         </div>
-        <div class="space-y-1">
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-gray-400"></i>SPY</span><span>3.3%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-400"></i>삼성전자우</span><span>3.2%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-purple-400"></i>QQQ</span><span>3.0%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-rose-400"></i>RISE 종합채권(A-...)</span><span>1.9%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-amber-400"></i>JEPQ</span><span>1.2%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-emerald-400"></i>SCHD</span><span>1.2%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-green-300"></i>현대트레이딩</span><span>1.0%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-300"></i>미국부동산리츠...</span><span>0.8%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-violet-300"></i>JEPI</span><span>0.6%</span></div>
-          <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-gray-500"></i>기타</span><span>1%</span></div>
+        <div class="dividend-item">
+          <span class="label">시가 배당률</span>
+          <span class="value">1.58%</span>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Monthly Dividend (from rich1.png) -->
-  <section class="mt-8 px-4">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <h2 class="text-lg font-bold">예상 배당금 (단위: KRW)</h2>
-        <span class="rounded bg-yellow-900/50 px-2 py-1 text-xs text-yellow-400">세금 15% 적용 ></span>
+    <div class="composition-section">
+      <div class="tabs">
+        <button class="tab-button active">자산 구성</button>
+        <button class="tab-button">배당 구성</button>
       </div>
-      <div class="card-bg rounded-lg p-2">
-        <i class="fas fa-calendar-check text-yellow-400"></i>
+      <div class="share-icon">&#x21B1;</div>
+      <div class="composition-content">
+        <div class="chart-container">
+          <canvas id="compositionChart"></canvas>
+          <div class="chart-center-text">₩524,490,424</div>
+        </div>
+        <div class="legend">
+          <div class="legend-column">
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 삼성물산 <span class="percentage">29.0%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 삼성바이오로직스 <span class="percentage">16.6%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 삼성전자 <span class="percentage">7.6%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FF0000;"></span> BioTNS <span class="percentage">5.7%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FFA500;"></span> KRW <span class="percentage">4.9%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 미국나스닥100(...) <span class="percentage">4.3%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 미국S&P500(TI...) <span class="percentage">4.1%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #0000FF;"></span> 코리아배당다우... <span class="percentage">4.0%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FF4500;"></span> 미국배당커버드... <span class="percentage">3.4%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FFD700;"></span> KT <span class="percentage">3.3%</span></div>
+          </div>
+          <div class="legend-column">
+            <div class="legend-item"><span class="color-box" style="background-color: #008000;"></span> SPY <span class="percentage">3.3%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #008080;"></span> 삼성전자우 <span class="percentage">3.1%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #0000FF;"></span> QQQ <span class="percentage">3.0%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #4682B4;"></span> RISE 종합채권(A...) <span class="percentage">1.9%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #90EE90;"></span> JEPQ <span class="percentage">1.2%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #808080;"></span> SCHD <span class="percentage">1.2%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FF4500;"></span> 현대오토에버 <span class="percentage">1.0%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #800080;"></span> 미국부동산리츠... <span class="percentage">0.8%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #0000FF;"></span> JEPI <span class="percentage">0.6%</span></div>
+            <div class="legend-item"><span class="color-box" style="background-color: #FFD700;"></span> 기타 <span class="percentage">1%</span></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="mt-6 flex h-48 items-end justify-between px-2 text-center text-xs">
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">32만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 10.9%"></div><p class="mt-2 text-secondary">1월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">35만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 11.9%"></div><p class="mt-2 text-secondary">2월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">34만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 11.6%"></div><p class="mt-2 text-secondary">3월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">293만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 100%"></div><p class="mt-2 text-secondary">4월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">87만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 29.7%"></div><p class="mt-2 text-secondary">5월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">37만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 12.6%"></div><p class="mt-2 text-secondary">6월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">51만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-yellow-400" style="height: 17.4%"></div><p class="mt-2 text-secondary">7월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">63만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 21.5%"></div><p class="mt-2 text-secondary">8월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">35만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 11.9%"></div><p class="mt-2 text-secondary">9월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">33만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 11.3%"></div><p class="mt-2 text-secondary">10월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">80만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 27.3%"></div><p class="mt-2 text-secondary">11월</p></div>
-      <div class="flex h-full w-1/12 flex-col justify-end text-center"><p class="text-sm text-secondary">42만</p><div class="mx-auto mt-1 w-full rounded-t-sm bg-[#3E414B]" style="height: 14.3%"></div><p class="mt-2 text-secondary">12월</p></div>
+    <div class="investment-status-section">
+      <div class="section-header">
+        <span class="title">투자 현황</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="investment-table">
+        <div class="table-row header">
+          <span class="col-name">종목명</span>
+          <span class="col-amount">투입금</span>
+          <span class="col-amount">평가액</span>
+          <span class="col-profit">수익금</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성물산</span>
+          <span class="col-amount">₩150,000,000</span>
+          <span class="col-amount">₩152,000,000</span>
+          <span class="col-profit positive">+₩2,000,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성바이오로직스</span>
+          <span class="col-amount">₩80,000,000</span>
+          <span class="col-amount">₩78,000,000</span>
+          <span class="col-profit negative">-₩2,000,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성전자</span>
+          <span class="col-amount">₩40,000,000</span>
+          <span class="col-amount">₩41,000,000</span>
+          <span class="col-profit positive">+₩1,000,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">BioTNS</span>
+          <span class="col-amount">₩30,000,000</span>
+          <span class="col-amount">₩30,500,000</span>
+          <span class="col-profit positive">+₩500,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">KRW</span>
+          <span class="col-amount">₩25,000,000</span>
+          <span class="col-amount">₩25,000,000</span>
+          <span class="col-profit zero">₩0</span>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <!-- Sector Allocation (from rich1.png) -->
-  <section class="mt-8 px-4">
-    <h2 class="text-lg font-bold">분야별 비중</h2>
-    <div class="mt-3 flex h-3 w-full overflow-hidden rounded-full">
-      <div style="width: 29.18%; background-color: #F87171;"></div>
-      <div style="width: 28.90%; background-color: #60A5FA;"></div>
-      <div style="width: 16.23%; background-color: #FB923C;"></div>
-      <div style="width: 10.75%; background-color: #A78BFA;"></div>
-      <div style="width: 5.72%; background-color: #C4B5FD;"></div>
-      <div style="width: 4.90%; background-color: #34D399;"></div>
-      <div style="width: 3.29%; background-color: #FACC15;"></div>
-      <div style="width: 1.03%; background-color: #4ADE80;"></div>
+    <div class="dividend-status-section">
+      <div class="section-header">
+        <span class="title">배당 현황</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="dividend-table">
+        <div class="table-row header">
+          <span class="col-name">종목명</span>
+          <span class="col-amount">배당금</span>
+          <span class="col-amount">배당률</span>
+          <span class="col-profit">수익률</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성물산</span>
+          <span class="col-amount">₩1,500,000</span>
+          <span class="col-amount">1.00%</span>
+          <span class="col-profit positive">+0.50%</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성바이오로직스</span>
+          <span class="col-amount">₩800,000</span>
+          <span class="col-amount">1.00%</span>
+          <span class="col-profit negative">-0.20%</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">삼성전자</span>
+          <span class="col-amount">₩400,000</span>
+          <span class="col-amount">1.00%</span>
+          <span class="col-profit positive">+0.10%</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">BioTNS</span>
+          <span class="col-amount">₩300,000</span>
+          <span class="col-amount">1.00%</span>
+          <span class="col-profit positive">+0.05%</span>
+        </div>
+        <div class="table-row">
+          <span class="col-name">KRW</span>
+          <span class="col-amount">₩250,000</span>
+          <span class="col-amount">1.00%</span>
+          <span class="col-profit zero">0%</span>
+        </div>
+      </div>
     </div>
-    <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-xs sm:grid-cols-3">
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-red-400"></i>유통 29.18%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-blue-400"></i>ETF 28.90%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-orange-400"></i>헬스케어 16.23%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-purple-400"></i>첨단 기술 10.75%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-indigo-300"></i>기타 5.72%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-emerald-400"></i>현금 4.90%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-yellow-400"></i>통신 3.29%</span></div>
-      <div class="flex items-center"><span><i class="fas fa-square mr-2 text-green-400"></i>운송물류 1.03%</span></div>
+    <div class="monthly-dividend-section">
+      <div class="section-header">
+        <span class="title">월별 배당금</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="chart-container-bar">
+        <canvas id="monthlyDividendChart"></canvas>
+      </div>
     </div>
-  </section>
-
-  <!-- Line Chart (from CHART.png) -->
-  <section class="mt-8 mb-4 px-4">
-      <div class="relative rounded-lg bg-[#252832] p-4">
-          <div class="absolute" style="left: 52%; top: 28%; transform: translateX(-50%); z-index: 10;">
-              <div class="rounded-lg bg-[#3E414B] p-2 text-center shadow-lg">
-                  <p class="text-xs text-gray-400">06.04.20</p>
-                  <p class="text-sm font-bold text-white">$840.00</p>
-              </div>
-          </div>
-          <svg viewBox="0 0 350 150" class="h-40 w-full">
-              <defs>
-                  <filter id="glow-orange" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-                  <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" /><feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
-              </defs>
-              <path d="M5 81C 49 20, 58 130, 104 81 C 149 32, 151 132, 199 81 C 247 30, 252 130, 297 81 S 345 20, 345 81" fill="none" stroke="#F97316" stroke-width="2" filter="url(#glow-orange)"></path>
-              <path d="M5 100C 49 150, 58 50, 104 100 C 149 150, 151 50, 199 100 C 247 150, 252 50, 297 100 S 345 150, 345 100" fill="none" stroke="#8B5CF6" stroke-width="2" filter="url(#glow-blue)"></path>
-              <circle cx="199" cy="100" r="4" fill="#1A1C23" stroke="#8B5CF6" stroke-width="2"></circle>
-          </svg>
-          <div class="mt-2 flex justify-between text-xs text-gray-400">
-              <span>Apr 01</span><span>Apr 02</span><span>Apr 03</span><span class="font-bold text-white">Apr 04</span><span>Apr 05</span><span>Apr 06</span><span>Apr 07</span>
-          </div>
+    <div class="dividend-calendar-section">
+      <div class="section-header">
+        <span class="title">배당 달력</span>
+        <span class="view-all">전체 보기 →</span>
       </div>
-  </section>
-
-  <!-- Divider -->
-  <hr class="divider my-8">
-
-  <!-- Asset List (from rich2.png) -->
-  <section class="px-4">
-      <!-- Filters -->
-      <div class="flex items-center justify-between">
-          <div class="flex space-x-2">
-              <button class="active-filter-tab px-4 py-2 text-sm font-bold rounded-full">전체</button>
-              <button class="inactive-filter-tab px-4 py-2 text-sm font-bold rounded-full">미국</button>
-              <button class="inactive-filter-tab px-4 py-2 text-sm font-bold rounded-full">한국</button>
-              <button class="inactive-filter-tab px-4 py-2 text-sm font-bold rounded-full">현금자산</button>
-              <button class="inactive-filter-tab px-4 py-2 text-sm font-bold rounded-full">기타자산</button>
-          </div>
+      <div class="calendar-grid">
+        <div class="calendar-month">1월</div>
+        <div class="calendar-month">2월</div>
+        <div class="calendar-month">3월</div>
+        <div class="calendar-month">4월</div>
+        <div class="calendar-month">5월</div>
+        <div class="calendar-month">6월</div>
+        <div class="calendar-month">7월</div>
+        <div class="calendar-month">8월</div>
+        <div class="calendar-month">9월</div>
+        <div class="calendar-month">10월</div>
+        <div class="calendar-month">11월</div>
+        <div class="calendar-month">12월</div>
       </div>
-      <div class="flex justify-between items-center mt-4">
-          <div class="text-sm font-semibold">
-              <span>평가금액순</span>
-              <i class="fas fa-chevron-down ml-1"></i>
-          </div>
-          <div class="flex items-center space-x-4">
-              <div class="text-sm text-secondary">
-                  <span>포트폴리오 통화(₩)로 보기</span>
-                  <div class="relative inline-block w-10 ml-2 align-middle select-none transition duration-200 ease-in">
-                      <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" checked/>
-                      <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-                  </div>
-              </div>
-              <span class="text-sm text-secondary">편집</span>
-          </div>
+    </div>
+    <div class="dividend-history-section">
+      <div class="section-header">
+        <span class="title">배당 내역</span>
+        <span class="view-all">전체 보기 →</span>
       </div>
-
-      <!-- Asset Items -->
-      <div class="mt-4 space-y-3">
-          <!-- 삼성물산 -->
-          <div class="card-bg p-4 rounded-lg">
-              <div class="flex justify-between items-start">
-                  <div class="flex items-center space-x-3">
-                      <div class="samsung-logo bg-blue-500 flex items-center justify-center text-white font-bold text-xs">S</div>
-                      <div><p class="font-bold">삼성물산 <span class="text-secondary font-normal text-sm">유통</span></p></div>
-                  </div>
-                  <p class="text-secondary text-sm">수량 <span class="text-main font-semibold">900</span></p>
-              </div>
-              <div class="mt-3 grid asset-item-grid gap-x-4 text-sm">
-                  <div>
-                      <p class="text-secondary">자산가치 <span class="text-main font-bold">₩153,000,000</span></p>
-                      <p class="text-secondary">수익 <span class="text-blue-accent font-bold">₩30,793,100 (25.20%)</span></p>
-                      <p class="text-secondary">배당달 <span class="text-main font-bold">4</span></p>
-                  </div>
-                  <div class="text-right">
-                      <p class="text-secondary">구매가 <span class="text-main font-bold">₩135,785</span></p>
-                      <p class="text-secondary">현재가 <span class="text-main font-bold">₩170,000</span> <span class="text-red-accent">(▼0.12%)</span></p>
-                      <p class="text-secondary">투자배당률 <span class="text-main font-bold">1.63%</span> <span class="text-blue-accent">(₩1,989,000)</span></p>
-                  </div>
-              </div>
-          </div>
-
-          <!-- 삼성바이오로직스 -->
-          <div class="card-bg p-4 rounded-lg">
-              <div class="flex justify-between items-start">
-                  <div class="flex items-center space-x-3">
-                      <div class="samsung-logo bg-blue-700 flex items-center justify-center text-white font-bold text-xs">S</div>
-                      <div><p class="font-bold">삼성바이오로직스 <span class="text-secondary font-normal text-sm">헬스케어</span></p></div>
-                  </div>
-                  <p class="text-secondary text-sm">수량 <span class="text-main font-semibold">80</span></p>
-              </div>
-              <div class="mt-3 grid asset-item-grid gap-x-4 text-sm">
-                  <div>
-                      <p class="text-secondary">자산가치 <span class="text-main font-bold">₩85,120,000</span></p>
-                      <p class="text-secondary">수익 <span class="text-blue-accent font-bold">₩40,954,704 (92.73%)</span></p>
-                      <p class="text-secondary">배당달 <span class="text-main font-bold">-</span></p>
-                  </div>
-                  <div class="text-right">
-                      <p class="text-secondary">구매가 <span class="text-main font-bold">₩552,066</span></p>
-                      <p class="text-secondary">현재가 <span class="text-main font-bold">₩1,064,000</span> <span class="text-red-accent">(▲2.11%)</span></p>
-                      <p class="text-secondary">투자배당률 <span class="text-main font-bold">-</span></p>
-                  </div>
-              </div>
-          </div>
-
-          <!-- 삼성전자 -->
-          <div class="card-bg p-4 rounded-lg">
-              <div class="flex justify-between items-start">
-                  <div class="flex items-center space-x-3">
-                      <div class="samsung-logo bg-blue-500 flex items-center justify-center text-white font-bold text-xs">S</div>
-                      <div><p class="font-bold">삼성전자 <span class="text-secondary font-normal text-sm">첨단 기술</span></p></div>
-                  </div>
-                  <p class="text-secondary text-sm">수량 <span class="text-main font-semibold">600</span></p>
-              </div>
-              <div class="mt-3 grid asset-item-grid gap-x-4 text-sm">
-                  <div>
-                      <p class="text-secondary">자산가치 <span class="text-main font-bold">₩39,840,000</span></p>
-                      <p class="text-secondary">수익 <span class="text-blue-accent font-bold">₩8,157,502 (25.75%)</span></p>
-                      <p class="text-secondary">배당달 <span class="text-main font-bold">4, 5, 8, 11</span></p>
-                  </div>
-                  <div class="text-right">
-                      <p class="text-secondary">구매가 <span class="text-main font-bold">₩52,804</span></p>
-                      <p class="text-secondary">현재가 <span class="text-main font-bold">₩66,400</span> <span class="text-red-accent">(▲0.61%)</span></p>
-                      <p class="text-secondary">투자배당률 <span class="text-main font-bold">2.33%</span> <span class="text-blue-accent">(₩739,500)</span></p>
-                  </div>
-              </div>
-          </div>
-
-          <!-- BioTNS -->
-          <div class="card-bg p-4 rounded-lg">
-              <div class="flex justify-between items-start">
-                  <div class="flex items-center space-x-3">
-                      <div class="w-9 h-9 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-lg">B</div>
-                      <div><p class="font-bold">BioTNS <span class="text-secondary font-normal text-sm">기타</span></p></div>
-                  </div>
-                  <p class="text-secondary text-sm">수량 <span class="text-main font-semibold">1</span></p>
-              </div>
-              <div class="mt-3 grid asset-item-grid gap-x-4 text-sm">
-                  <div>
-                      <p class="text-secondary">자산가치 <span class="text-main font-bold">₩30,000,000</span></p>
-                      <p class="text-secondary">수익 <span class="text-main font-bold">-</span></p>
-                      <p class="text-secondary">배당달 <span class="text-main font-bold">-</span></p>
-                  </div>
-                  <div class="text-right">
-                      <p class="text-secondary">구매가 <span class="text-main font-bold">₩30,000,000</span></p>
-                      <p class="text-secondary">현재가 <span class="text-main font-bold">-</span></p>
-                      <p class="text-secondary">투자배당률 <span class="text-main font-bold">-</span></p>
-                  </div>
-              </div>
-          </div>
+      <div class="history-table">
+        <div class="table-row header">
+          <span class="col-date">날짜</span>
+          <span class="col-name">종목명</span>
+          <span class="col-amount">배당금</span>
+        </div>
+        <div class="table-row">
+          <span class="col-date">2025-07-15</span>
+          <span class="col-name">삼성물산</span>
+          <span class="col-amount">₩1,500,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-date">2025-07-10</span>
+          <span class="col-name">삼성바이오로직스</span>
+          <span class="col-amount">₩800,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-date">2025-07-05</span>
+          <span class="col-name">삼성전자</span>
+          <span class="col-amount">₩400,000</span>
+        </div>
+        <div class="table-row">
+          <span class="col-date">2025-07-01</span>
+          <span class="col-name">BioTNS</span>
+          <span class="col-amount">₩300,000</span>
+        </div>
       </div>
-  </section>
-
+    </div>
+    <div class="news-section">
+      <div class="section-header">
+        <span class="title">뉴스</span>
+        <span class="view-all">전체 보기 →</span>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <span class="news-date">2025-07-24</span>
+          <span class="news-title">삼성전자, 반도체 투자 확대 발표...</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">2025-07-23</span>
+          <span class="news-title">미국 증시, 기술주 강세로 상승 마감...</span>
+        </div>
+        <div class="news-item">
+          <span class="news-date">2025-07-22</span>
+          <span class="news-title">원/달러 환율, 소폭 하락...</span>
+        </div>
+      </div>
+    </div>
+    <div class="settings-section">
+      <div class="section-header">
+        <span class="title">설정</span>
+      </div>
+      <div class="settings-list">
+        <div class="settings-item">
+          <span class="settings-label">알림 설정</span>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="settings-item">
+          <span class="settings-label">다크 모드</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="settings-item">
+          <span class="settings-label">데이터 초기화</span>
+          <button class="reset-button">초기화</button>
+        </div>
+      </div>
+    </div>
     <h1>꿈별바우</h1>
     <p>뚱땡이 고냥이는 한가로이 낮잠을 즐긴다.</p>
     <button onclick="hello()">누르기</button>
