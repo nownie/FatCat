@@ -28,11 +28,13 @@ body {
   }
 
   .container {
-    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Set a max-width for centering */
+    width: 100%; /* Ensure container takes full width up to max-width */
     height: 100%; /* Full height */
     display: flex; /* Make container a flex container */
     flex-direction: row; /* Arrange children in a row */
     overflow: hidden; /* Prevent scrolling on the container itself */
+    margin: auto; /* Center the container */
   }
 
   body > p, .last-updated {
