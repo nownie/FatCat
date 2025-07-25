@@ -160,6 +160,7 @@ button {
 
 .asset-alloc-content {
   width: 40%;
+  align-items: flex-start;
 }
 
 .asset-alloc-legend {
