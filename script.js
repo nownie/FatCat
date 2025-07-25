@@ -2,12 +2,12 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
-const gitCommitTime = "2025-07-25T15:00:56+09:00";
+const gitCommitTime = "2025-07-25T15:04:52+09:00";
 
 document.addEventListener('DOMContentLoaded', () => {
-  const lastUpdatedElement = document.getElementById('last-updated-time');
-  if (lastUpdatedElement) {
-    lastUpdatedElement.textContent = new Date(gitCommitTime).toLocaleString();
+  const footerLastUpdatedElement = document.getElementById('footer-last-updated-time');
+  if (footerLastUpdatedElement) {
+    footerLastUpdatedElement.textContent = new Date(gitCommitTime).toLocaleString();
   }
 });
 
