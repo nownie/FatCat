@@ -51,13 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const borderColors = Array(12).fill('rgba(50, 50, 50, 1)'); // Light black
   borderColors[currentMonth] = 'rgba(255, 205, 86, 1)'; // Yellow
 
+  const barData = barChart.data.datasets[0].data;
+  const maxBarValue = Math.max(...barData);
+  const suggestedMaxY = maxBarValue * 1.2; // Add 20% padding
+
   const barChart = new Chart(barCtx, {
     type: 'bar',
     data: {
       labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
       datasets: [{
         label: '월 배당금',
-        data: [12, 9, 3, 5, 2, 3, 7, 8, 10, 6, 4, 11],
+        data: barData,
         backgroundColor: barColors,
         borderColor: borderColors,
         borderWidth: 1
@@ -88,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         },
         y: {
-          display: false
+          display: false,
+          suggestedMax: suggestedMaxY
         }
       }
     }
