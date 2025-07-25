@@ -155,28 +155,24 @@ button {
 .asset-alloc-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0;
+  align-items: flex-start;
 }
 
 .asset-alloc-content {
   width: 40%;
-  background-color: #EAEBEE;
 }
 
 .asset-alloc-legend {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
   margin-left: 20px;
-  background-color:#FFD700;
-  padding: 0px;
+  align-items: flex-start;
 }
 
 .legend-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .legend-color {
