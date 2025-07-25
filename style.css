@@ -45,6 +45,10 @@ body {
   box-sizing: border-box;
 }
 
+.last-updated {
+  padding: 5px;
+}
+
 .asset-section {
   width: 100%;
   background-color: #000; /* Dark background */
