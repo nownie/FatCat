@@ -45,72 +45,48 @@
         </div>
       </div>
     </section>
-    <section class="composition-section">
-      <div class="section-header">
-        <span class="title">자산 구성</span>
-        <span class="view-all">전체 보기 →</span>
-      </div>
-      <div class="tabs">
-        <button class="tab-button active">자산</button>
-        <button class="tab-button">섹터</button>
-        <button class="tab-button">국가</button>
-      </div>
-      <div class="composition-content">
-        <!-- Chart and legend will go here -->
-      </div>
-    </section>
     
-    </section>
-    <section class="investment-status-section">
-      <div class="section-header">
-        <span class="title">투자 현황</span>
-        <span class="view-all">전체 보기 →</span>
-      </div>
-      <div class="investment-table">
-        <div class="table-row header">
-          <span class="col-name">종목</span>
-          <span class="col-amount">평가 금액</span>
-          <span class="col-profit">수익률</span>
+    <!-- Asset Composition (from rich1.png) -->
+    <section class="card-bg mt-8 px-4 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex rounded-lg bg-[#1A1C23] p-1">
+          <button class="active-tab rounded-md px-4 py-1.5 text-sm font-bold">자산 구성</button>
+          <button class="inactive-tab rounded-md px-4 py-1.5 text-sm font-bold">배당 구성</button>
         </div>
-        <!-- Investment items will be dynamically added here -->
+        <i class="fas fa-share-square text-secondary text-xl"></i>
       </div>
-    </section>
-    
-    </section>
-    <section class="dividend-status-section">
-      <div class="section-header">
-        <span class="title">배당 현황</span>
-        <span class="view-all">전체 보기 →</span>
-      </div>
-      <div class="dividend-table">
-        <div class="table-row header">
-          <span class="col-name">종목</span>
-          <span class="col-amount">배당 금액</span>
-          <span class="col-profit">배당률</span>
+      <div class="mt-6 flex">
+        <div class="donut-chart relative flex flex-shrink-0 items-center justify-center">
+          <div class="card-bg absolute flex h-[110px] w-[110px] items-center justify-center rounded-full">
+            <span class="text-lg font-bold">₩524,402,822</span>
+          </div>
         </div>
-        <!-- Dividend items will be dynamically added here -->
-      </div>
-    </section>
-    
-    </section>
-    <section class="monthly-dividend-section">
-      <div class="section-header">
-        <span class="title">월별 배당</span>
-        <span class="view-all">전체 보기 →</span>
-      </div>
-      <div class="chart-container-bar">
-        <!-- Bar chart will be rendered here -->
-      </div>
-    </section>
-    
-    </section>
-    <section class="dividend-calendar-section">
-      <div class="section-header">
-        <span class="title">배당 캘린더</span>
-        <span class="view-all">전체 보기 →</span>
-      </div>
-      <div class="calendar-grid">
-        <!-- Calendar months will be dynamically added here -->
+        <div class="ml-4 grid w-full grid-cols-2 gap-x-4 text-xs">
+          <div class="space-y-1">
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-emerald-400"></i>삼성물산</span><span>29.2%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-blue-400"></i>삼성바이오로직스</span><span>16.2%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-400"></i>삼성전자</span><span>7.6%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-orange-400"></i>BioTNS</span><span>5.7%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-yellow-400"></i>KRW</span><span>4.9%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-purple-400"></i>미국나스닥100(...)</span><span>4.3%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-green-400"></i>미국S&P500(TI...)</span><span>4.1%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-teal-400"></i>코리아배당다우...</span><span>4.0%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-indigo-400"></i>미국배당커버드...</span><span>3.4%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-red-400"></i>KT</span><span>3.3%</span></div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-gray-400"></i>SPY</span><span>3.3%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-400"></i>삼성전자우</span><span>3.2%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-purple-400"></i>QQQ</span><span>3.0%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-rose-400"></i>RISE 종합채권(A-...)</span><span>1.9%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-amber-400"></i>JEPQ</span><span>1.2%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-emerald-400"></i>SCHD</span><span>1.2%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-green-300"></i>현대트레이딩</span><span>1.0%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-pink-300"></i>미국부동산리츠...</span><span>0.8%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-violet-300"></i>JEPI</span><span>0.6%</span></div>
+            <div class="flex justify-between"><span><i class="fas fa-square mr-2 text-gray-500"></i>기타</span><span>1%</span></div>
+          </div>
+        </div>
       </div>
     </section>
     
