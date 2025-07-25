@@ -158,7 +158,7 @@ button {
   align-items: center;
 }
 
-.asset-chart-container {
+.asset-alloc-container {
   width: 40%;
 }
 
@@ -191,5 +191,5 @@ button {
 
 .bar-chart-section .chart-container {
   width: 100%;
-  border-radius: 0px;
+  border-radius: 5px;
 }
