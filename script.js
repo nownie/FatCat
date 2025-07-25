@@ -2,13 +2,43 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
-const gitCommitTime = "2025-07-25T15:13:54+09:00";
+const gitCommitTime = "2025-07-25T15:16:41+09:00";
 
 document.addEventListener('DOMContentLoaded', () => {
   const footerLastUpdatedElement = document.getElementById('footer-last-updated-time');
   if (footerLastUpdatedElement) {
     footerLastUpdatedElement.textContent = new Date(gitCommitTime).toLocaleString();
   }
+
+  // Donut Chart
+  const ctx = document.getElementById('donutChart').getContext('2d');
+  const donutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['주식', '부동산', '현금', '기타'],
+      datasets: [{
+        data: [300, 50, 100, 20],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(75, 192, 192)'
+        ],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: {
+            color: '#EAEBEE' // Light grey for legend text
+          }
+        }
+      }
+    }
+  });
 });
 
 let newWorker;

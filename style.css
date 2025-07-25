@@ -69,6 +69,29 @@ body {
   box-sizing: border-box;
 }
 
+.chart-section {
+  width: 100%;
+  background-color: #000; /* Dark background */
+  padding: 15px;
+  color: #EAEBEE; /* Light grey text */
+  text-align: left;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  position: relative;
+  height: 200px; /* Adjust height as needed */
+  width: 100%;
+}
+
 .asset-header {
   display: flex;
   justify-content: space-between;
