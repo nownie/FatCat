@@ -2,37 +2,37 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
-
-
-// Donut Chart
-const ctx = document.getElementById('donutChart').getContext('2d');
-const donutChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-    labels: ['leg1', 'gl2', 'gl3'],
-    datasets: [{
-      data: [40, 30, 30],
-      backgroundColor: [
-        'rgb(255, 99, 132)', // Red
-        'rgb(54, 162, 235)', // Blue
-        'rgb(255, 205, 86)'  // Yellow
-      ],
-      hoverOffset: 4
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: 'right', // Show legend on the right
-        align: 'center', // Center align legend items
-        labels: {
-          color: '#FFFFFF' // White for legend text
+document.addEventListener('DOMContentLoaded', () => {
+  // Donut Chart
+  const ctx = document.getElementById('donutChart').getContext('2d');
+  const donutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['leg1', 'gl2', 'gl3'],
+      datasets: [{
+        data: [40, 30, 30],
+        backgroundColor: [
+          'rgb(255, 99, 132)', // Red
+          'rgb(54, 162, 235)', // Blue
+          'rgb(255, 205, 86)'  // Yellow
+        ],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'right', // Show legend on the right
+          align: 'center', // Center align legend items
+          labels: {
+            color: '#FFFFFF' // White for legend text
+          }
         }
       }
     }
-  }
+  });
 });
 
 let newWorker;
