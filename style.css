@@ -63,13 +63,13 @@ body {
   }
 
   .main-content {
-    flex: 2; /* Main content takes more space */
+    flex: 1; /* Main content takes equal space */
     overflow-y: auto; /* Allow vertical scrolling for main content */
     height: 100%;
   }
 
   .asset-list-section {
-    flex: 1; /* Asset list takes less space */
+    flex: 1; /* Asset list takes equal space */
     order: 1; /* Place on the right */
     overflow-y: auto; /* Allow vertical scrolling for asset list */
     height: 100%;
