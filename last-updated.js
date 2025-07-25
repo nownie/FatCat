@@ -9,7 +9,7 @@ try {
     // Get the latest commit time
     const gitCommitTime = execSync('git log -1 --format=%aI').toString().trim();
     const formattedDate = new Date(gitCommitTime).toLocaleString();
-    const newContent = `Last Updated: ${formattedDate}`;
+    const newContent = `Last Updated: ${formattedDate}</div>`;
 
     // Read the file
     let fileContent = fs.readFileSync(filePath, 'utf8');
