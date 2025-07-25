@@ -136,7 +136,7 @@ body {
   padding-bottom: 25px;
   background-color: #000; /* Black background for footer */
   color: #EAEBEE; /* Light grey text color */
-  font-size: 8px;
+  font-size: 12px;
   text-align: center;
   flex-shrink: 0; /* Prevent shrinking */
 }
@@ -162,8 +162,8 @@ button {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-left: 20px;
+  gap: 5px;
+  margin-left: 0px;
 }
 
 .legend-item {
@@ -172,7 +172,7 @@ button {
 }
 
 .legend-color {
-  width: 5px;
+  width: 6px;
   height: 12px;
   margin-right: 8px;
   border-radius: 2px;
