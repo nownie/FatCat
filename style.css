@@ -159,6 +159,7 @@ button {
 }
 
 .chart-legend {
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -175,4 +176,8 @@ button {
   height: 12px;
   margin-right: 8px;
   border-radius: 2px;
+}
+
+.chart-container {
+  width: 40%;
 }
