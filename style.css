@@ -169,6 +169,8 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
   margin-left: 20px;
+  background-color:#FFD700;
+  padding: 0px;
 }
 
 .legend-item {
