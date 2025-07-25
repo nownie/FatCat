@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: false
+          display: true
         },
         datalabels: {
           anchor: 'end',
@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
           formatter: Math.round,
           font: {
             weight: 'bold'
-          }
+          },
+          color: '#B0B0B0' // Gray color for labels
         }
       },
       scales: {
