@@ -22,15 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'right', // Show legend on the right
-          align: 'center', // Center align legend items
-          labels: {
-            color: '#FFFFFF' // White for legend text
-          }
-        }
-      }
     }
   });
 });

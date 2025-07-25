@@ -39,68 +39,26 @@ body {
   justify-content: flex-start; /* Align content to the top for scrolling */
   text-align: center;
   overflow: auto; /* Allow scrolling within the container */
-  color: #EAEBEE; /* Set text color to light grey for content area */
-  padding: 0; /* Remove padding from container to allow sections to be full width */
+  color: #000; /* Set text color to black for content area */
+  padding-left: 0;
+  padding-right: 0;
   box-sizing: border-box;
 }
 
-.footer {
+.asset-summary {
   width: 100%;
-  background-color: #000; /* Black background for footer */
-  color: #EAEBEE; /* Light grey text color */
-  font-size: 12px;
-  text-align: center;
-  flex-shrink: 0; /* Prevent shrinking */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0; /* Adds 10px of padding to top and bottom */
-}
-
-
-.asset-section {
-  width: 100%;
-  background-color: #000; /* Dark background */
+  background-color: #1A1C23; /* Dark background */
   padding: 15px;
   color: #EAEBEE; /* Light grey text */
   text-align: left;
   margin-bottom: 20px;
   box-sizing: border-box;
-}
-
-.chart-section {
-  width: 100%;
-  background-color: #000; /* Dark background */
-  padding: 15px;
-  color: #EAEBEE; /* Light grey text */
-  text-align: left;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-.chart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.chart-container {
-  position: relative;
-  height: 300px; /* Increased height for better visibility */
-  width: 100%;
-}
-
-.chart-header .label {
-  font-size: 16px;
-  color: #FFFFFF; /* Ensure label is visible */
-  font-weight: bold;
 }
 
 .asset-header {
   display: flex;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -171,6 +129,17 @@ body {
 .dividend-item .value {
   font-size: 18px;
   font-weight: bold;
+}
+
+#last-updated {
+  width: 100%;
+  height: 25px; /* Fixed height for footer */
+  padding: 5px 0;
+  background-color: #000; /* Black background for footer */
+  color: #EAEBEE; /* Light grey text color */
+  font-size: 12px;
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 button {
