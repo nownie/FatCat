@@ -2,7 +2,7 @@ function hello() {
   alert("Hello, 꿈별바우!");
 }
 
-const gitCommitTime = "2025-07-25T15:16:41+09:00";
+const gitCommitTime = "2025-07-25T15:34:02+09:00";
 
 document.addEventListener('DOMContentLoaded', () => {
   const footerLastUpdatedElement = document.getElementById('footer-last-updated-time');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       plugins: {
         legend: {
           labels: {
-            color: '#EAEBEE' // Light grey for legend text
+            color: '#FFFFFF' // White for legend text
           }
         }
       }

@@ -40,8 +40,7 @@ body {
   text-align: center;
   overflow: auto; /* Allow scrolling within the container */
   color: #EAEBEE; /* Set text color to light grey for content area */
-  padding-left: 0px;
-  padding-right: 0px;
+  padding: 0; /* Remove padding from container to allow sections to be full width */
   box-sizing: border-box;
 }
 
@@ -88,8 +87,14 @@ body {
 
 .chart-container {
   position: relative;
-  height: 200px; /* Adjust height as needed */
+  height: 300px; /* Increased height for better visibility */
   width: 100%;
+}
+
+.chart-header .label {
+  font-size: 16px;
+  color: #FFFFFF; /* Ensure label is visible */
+  font-weight: bold;
 }
 
 .asset-header {
